@@ -1,6 +1,5 @@
 const Record = require('../models/Record');
 
-// ✅ CREATE RECORD
 exports.createRecord = async (req, res) => {
   try {
     const record = await Record.create({
@@ -14,7 +13,6 @@ exports.createRecord = async (req, res) => {
   }
 };
 
-// ✅ GET ALL RECORDS
 exports.getAllRecords = async (req, res) => {
   try {
     const records = await Record.find().populate(
@@ -28,7 +26,6 @@ exports.getAllRecords = async (req, res) => {
   }
 };
 
-// ✅ UPDATE RECORD
 exports.updateRecord = async (req, res) => {
   try {
     const record = await Record.findByIdAndUpdate(req.params.id, req.body, {
@@ -45,7 +42,6 @@ exports.updateRecord = async (req, res) => {
   }
 };
 
-// ✅ DELETE RECORD
 exports.deleteRecord = async (req, res) => {
   try {
     const record = await Record.findByIdAndDelete(req.params.id);

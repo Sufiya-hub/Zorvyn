@@ -1,6 +1,5 @@
 const Record = require('../models/Record');
 
-// ✅ Dashboard Summary
 exports.getDashboard = async (req, res) => {
   try {
     const records = await Record.find();

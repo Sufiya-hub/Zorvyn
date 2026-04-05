@@ -293,7 +293,7 @@ const records = [
 
 const insertRecords = async () => {
   try {
-    await Record.deleteMany(); // optional clean
+    await Record.deleteMany();
     await Record.insertMany(records);
 
     console.log('✅ 40 records inserted successfully!');
